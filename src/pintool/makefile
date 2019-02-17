@@ -1,0 +1,7 @@
+PIN_HOME=C:\pin\source\tools
+
+COMMON_TOOLS=btr.dll
+
+INCLUDE_SUB_RULES=1
+SET_VCENV=0
+!INCLUDE $(PIN_HOME)\Nmakefile 

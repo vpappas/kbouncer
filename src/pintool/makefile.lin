@@ -1,0 +1,14 @@
+CXX			:= g++
+TOOL		:= btr.so
+
+PIN_KIT=/home/vpappas/pin/pin-2.10-45467-gcc.3.4.6-ia32_intel64-linux
+
+include $(PIN_KIT)/source/tools/makefile.gnu.config
+
+all: $(TOOL)
+
+%.so: %.cpp
+	$(CXX) $(CXXFLAGS) $(PIN_CXXFLAGS) $(PIN_LDFLAGS) -o $@ $< $(PIN_LIBS)
+
+clean:
+	rm -f $(TARGET)

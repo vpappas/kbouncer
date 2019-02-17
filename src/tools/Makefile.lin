@@ -1,0 +1,11 @@
+CC	= gcc
+CFLAGS	= -Wall -I../common
+TARGETS = anal
+
+all: $(TARGETS)
+
+anal: anal.c ../common/decode.c
+	$(CC) $(CFLAGS) $^ -o $@
+
+clean:
+	rm -rf $(TARGETS)
